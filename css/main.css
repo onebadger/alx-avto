@@ -1,0 +1,604 @@
+/********** GENERAL RULES **********/
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  color: #030202;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+}
+
+a {
+  text-decoration: none;
+  color: #030202;
+}
+
+img {
+  max-width: 100%;
+}
+
+.js-media {
+  display: none; /* javascript mediaqueri breakpoint */
+}
+
+
+
+/********** COMMON RULES **********/
+
+.wrap {
+  min-height: calc(100vh - 190px);
+}
+
+.headline {
+  font-size: 1.2em;
+}
+
+.section {
+  padding: 0 10px;
+}
+
+.section h2 {
+  text-align: center;
+  font-size: 1.4em;
+  padding: 10px 0;
+  margin-top: 10px;
+}
+
+
+
+/********** HEADER **********/
+
+#header {
+  padding-top: 20px; 
+}
+
+/***** logo *****/
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  padding-bottom: 2%;
+}
+
+.logo svg {
+  align-self: center;
+  width: 300px;
+  height: 23px;
+}
+
+.logo p {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
+  font-size: 0.89em;
+  letter-spacing: 1.23px;
+  margin-top: 5px;
+  align-self: center;
+}
+
+/***** navigation *****/
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 2% 3%;
+}
+
+.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(255,255,255,0.992); /* 0.992 */
+  width: 100%;
+  padding: 2% 3%;
+  -webkit-box-shadow: 0 0 3px rgba(0,0,0,0.3);
+  -moz-box-shadow: 0 0 3px rgba(0,0,0,0.3);
+  box-shadow: 0 0 3px rgba(0,0,0,0.3);
+  z-index: 101;
+}
+
+.main-menu {
+  display: none;
+}
+
+
+
+/***** dropdown button *****/
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+/*
+  margin: 0;
+  padding: 0;
+*/
+  align-self: center;
+}
+
+.dropbtn {
+  width: 20px;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 26px;
+  left: 0px;
+  background-color: rgba(255,255,255, .97);
+  padding:  30%;
+  min-width: 150px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.25);
+  z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 10px 15px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+  font-weight: 400;
+}
+
+.show {
+  display:block; /* js addClass to .dropdown-content onclick */
+}
+
+/***** phone *****/
+
+.phone {
+  display: none;
+}
+
+.phone-text {
+  display: none;
+}
+
+.nav-phone {
+  align-self: center;
+  font-weight: 700;
+  font-size: 1.3em;
+}
+
+
+
+/********** MAIN OFFER, SECOND OFFER **********/
+
+#main-offer,
+#second-offer {
+  padding: 10px;
+  color: #eee;
+  background-color: #253746; /* #1c355e #415464 #253746 #25282a */
+  box-shadow: 0 6px 8px -5px black;
+}
+
+.offer-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.offer-headline {
+  font-size: 1.4em;
+  font-weight: 700;
+  text-align: center;
+}
+
+.offer-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.offer-img {
+  display: none;
+}
+
+
+
+/********** SPECIFIC **********/
+
+#specific {
+  margin:  10px;
+  text-align: center;
+}
+
+#specific h3 {
+  padding: 12px 45px;
+  margin: 10px auto;
+  font-weight: 100;
+  font-size: 0.95em;
+  background-image: url('../img/done.svg');
+  background-repeat: no-repeat;
+  background-size: 30px 30px;
+  background-position: 10px center;  
+}
+
+#specific h3:nth-child(-n+3) {
+  border-bottom: 1px solid #bbb;
+}
+
+
+
+/********** PROFIT **********/
+
+#profit ul {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  list-style: none;
+  padding: 20px;
+  background-color: #fbfbfb;
+}
+
+#profit li {
+  padding: 4px;
+  border-bottom: 1px solid #ccc;
+}
+
+#profit li:last-child {
+  border-bottom: none;
+}
+
+
+
+/********** PORTFOLIO **********/
+
+.arrow-anchor {
+  display: block;
+  position: absolute;
+} /* all other arrows also- */
+
+.arrow-grey {
+  width: 70px;
+  background: rgba(0,0,0, .45);
+  border-radius: 50%;
+  padding: 10px;
+} /* -TOOLS arrows also- */
+
+#portfolio {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.portfolio-gallery-md,
+.portfolio-gallery-sm {
+  display: flex;
+  position: relative;
+}
+
+.portfolio-arrow-left {
+  top: calc(50% - 35px);
+  left: 4%;
+}
+
+.portfolio-arrow-right {
+  top: calc(50% - 35px);
+  right: 4%;
+}
+
+.portfolio-item {
+  position: relative;
+  margin: 2%;
+}
+
+.portfolio-condition {
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.1em;
+  padding: 2%;
+}
+
+.portfolio-text {
+  position: absolute;
+  bottom: 4px;
+  width: 100%;
+  padding: 3%;
+  color: #fff;
+  background-color: rgba(0,0,0, .45);
+  font-size: 0.9em;
+}
+
+
+
+/********** SERVICES **********/
+
+.services {
+  margin: 0;
+}
+
+.services h3 {
+  background: -webkit-linear-gradient(#fff, #eee 65%);
+  background: -moz-linear-gradient(#fff, #eee 65%);
+  background: -o-linear-gradient(#fff, #eee 65%);
+  background: linear-gradient(#fff, #eee 65%);
+  -webkit-box-shadow: 0 6px 8px -7px black;
+  -moz-box-shadow: 0 6px 8px -7px black;
+  box-shadow: 0 6px 8px -7px black;
+  border-radius: 4px;
+}
+
+.click {
+  display: block;
+  text-align: center;
+  padding: 10px 35px;
+  border: 1px solid #bbb;
+  border-radius: 4px;
+  margin: 6px 0px;
+  font-weight: 100;
+}
+
+.click-01,
+.click-02,
+.click-03,
+.click-04,
+.click-05,
+.click-06,
+.click-07 {
+  background-image: url('../img/plus.svg');
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+  background-position: 13.4px center;
+}
+
+.new {
+  background-image: url('../img/minus.svg');
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+  background-position: 13.4px center;
+}
+
+.services ul {
+  list-style: none;
+  padding: 5px 35px
+}
+
+.services ul li {
+  padding: 2px 0;
+}
+
+.hide {
+  display: none;
+}
+
+
+
+/********** TOOLS **********/
+/* -common arrows css in PORTFOLIO- */
+
+.tools-gallery-md {
+  display: none;
+}
+
+#tools p {
+  padding-bottom: 12px;
+}
+
+.tools-gallery {
+  margin: 0;
+  line-height: 0;
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.tools-anchor-left {
+  top: calc(50% - 35px);
+  left: 0;
+}
+
+.tools-anchor-right {
+  top: calc(50% - 35px);
+  right: 0;
+}
+
+
+
+/********** SECONF OFFER **********/ 
+/* -in MAIN OFFER- */
+
+
+
+/********** STAFF **********/
+/* -common arrows css in PORTFOLIO- */
+
+.staff-md {
+  display: none;
+} 
+
+.staff-gallery {
+  line-height: 0;
+  position: relative;
+}
+
+.staff-anchor-left {
+  top: calc(50% - 35px);
+  left: 0;
+}
+
+.staff-anchor-right {
+  top: calc(50% - 35px);
+  right: 0;
+}
+
+.arrow-white {
+  width: 80px;
+  padding: 15px;
+}
+
+.staff-img {
+  display: block;
+  margin: 0 auto 20px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  max-width: 160px;
+}
+
+.staff h3 {
+  text-align: center;
+}
+
+#staff p {
+  padding: 10px;
+  margin-top: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  bottom: 0;
+  width: 100%;
+}
+
+
+
+/********** INFOGRAPHICS **********/
+
+.infographics p {
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.2em;
+  color: #fff;
+  border-radius: 8px;
+  padding: 35px 10px;
+  margin: 10px 20px;
+  -webkit-box-shadow: 0 6px 8px -7px black;
+  -moz-box-shadow: 0 6px 8px -7px black;
+  box-shadow: 0 6px 8px -7px black; 
+}
+
+.infographics p:nth-child(1) {
+  background-color: #9cc83b;
+}
+
+.infographics p:nth-child(2) {
+  background-color: #eeb54c;
+}
+
+.infographics p:nth-child(3) {
+  background-color: #4cb4b6;
+}
+
+
+
+/********** CLIENTS **********/
+
+.clients-md {
+  display: none;
+}
+
+.clients-gallery {
+  line-height: 0;
+  position: relative;
+}
+
+.clients-anchor-left {
+  top: calc(50% - 35px);
+  left: 0;
+}
+
+.clients-anchor-right {
+  top: calc(50% - 35px);
+  right: 0;
+}
+
+.clients-img {
+  display: block;
+  margin: 0 auto 20px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  max-width: 160px;
+}
+
+.clients-info-box {
+  padding: 10px;
+  margin-top: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+
+
+/********** CONTACTS **********/
+
+#contacts ul {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+
+#contacts h3 {
+  text-align: center;
+  padding-top: 20px
+}
+
+#contacts form {
+  margin: 0 auto;
+}
+
+
+
+/********** FOOTER **********/
+
+footer {
+  text-align: center;
+  padding-top: 20px
+}
+
+footer hr {
+  color: #000;
+  width: 70%;
+  margin: 20px auto 35px;
+}
+
+.social svg {
+  width: 45px;
+  height: 45px;
+}
+
+.social svg:hover {
+  background-color: #222;
+}
+
+.copyright {
+  font-weight: 400;
+  letter-spacing: 4.0px;
+  padding-top: 10px;
+}
+
+.developer {
+  padding: 7px 0 15px;
+  font-size: 0.8em;
+}
+
+.developer a {
+  color: hotpink;
+}
+
+/* 404 error */
+
+.error404 h1 {
+  font-size: 3em;
+  text-align: center;
+  padding-top: 30px;
+}
+
+.error404 h3 {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 3%;
+}
+
+.error404 p {
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.3em;
+  padding-top: 20px;
+}
+
+
+
+

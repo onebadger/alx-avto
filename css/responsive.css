@@ -1,0 +1,557 @@
+@media (min-width: 600px) {
+  
+  /********** GENERAL RULES **********/
+  
+  .js-media {
+    display: inline; /* javascript mediaqueri breakpoint */
+  }
+  
+  
+  
+  /********** COMMON RULES **********/
+  
+  .section {
+    margin-bottom: 10px 0;
+  }
+  
+  .section h2 {
+    font-size: 1.55em;
+    padding: 40px 0 20px;
+  }
+  
+  .font-size-one {
+    font-size: 1.1em;
+  }
+  
+  
+  
+  /********** HEADER **********/
+  
+  #header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    max-width: 1200px;
+  }
+  
+  /***** logo *****/
+  
+  .logo {
+    order: 1;
+    flex-basis: 60%;
+    padding-left: 10px;
+  }
+  
+  .logo svg {
+    align-self: flex-start;
+  }
+  
+  .logo p {
+    align-self: flex-start;
+  }
+  
+  /***** navigation *****/
+  
+  nav {
+    flex-basis: 100%;
+    order: 3;
+    margin: 0;
+    
+    display: flex;
+    justify-content: center;
+  }
+  
+  .main-menu {
+    display: block;
+    font-weight: 700;
+  }
+  
+  .main-menu ul {
+    padding-left: 0;
+  }
+  
+  .main-menu li {
+    display: inline-block;
+    padding-right: 10px;
+  }
+  
+  .main-menu li:last-child {
+    padding-right: 0px;
+  }
+  
+  /***** dropdown button *****/
+  
+  .dropdown {
+    display: none;
+  }
+  
+  /***** phone *****/
+  
+  .nav-phone {
+    display: none;
+  }
+  
+  .phone {
+    display: block;
+    order:2;
+    flex-basis: 40%;
+    align-self:;
+    text-align: right;
+    padding-right: 10px;
+    font-weight: 700;
+    font-size: 1.3em;
+  }
+  
+  .phone-time {
+    font-size: 0.6em;
+    font-weight: 100;
+    letter-spacing: 3.8px
+  }
+  
+  
+  
+  /********** MAIN OFFER, SECOND OFFER **********/
+  
+  .offer-headline {
+    font-size: 1.8em;
+    flex-basis: 100%;
+  }
+  
+  .offer-box {
+    justify-content: space-around;
+  }
+  
+  .offer-img {
+    display: block;
+    align-self: center;
+    flex-basis: 50%;
+    max-width: 350px;
+  }
+  
+  .offer-img img {
+    padding: 25px;
+    border-radius: 30px;
+  }
+  
+  .offer-form {
+    flex-basis: 50%;
+    align-self: center;
+  }
+  
+  
+  
+  /********** SPECIFIC **********/
+ 
+  .specific {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 610px;
+    margin: 15px auto 0;
+  }
+  
+  #specific h3:nth-child(n) {
+    background: none;
+    border-bottom: none;
+    flex-basis: 47%;
+    
+    border-radius: 7px;
+    padding: 15px;
+    margin: 1.5% 1.5%;
+    font-weight: 700;
+    color: #030202;
+    background-color: #eee;
+    
+    -webkit-box-shadow: 0 6px 8px -7px black;
+    -moz-box-shadow: 0 6px 8px -7px black;
+    box-shadow: 0 6px 8px -7px black;
+  }
+  
+  
+  
+  /********** PROFIT **********/
+  
+  #profit {
+    margin: 0 20px;
+  }
+  
+  #profit ul {
+    border-radius: 10px;
+    border: 1px solid #3C6655;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #3C6655; /* #9cc83b; #eeb54c; #4cb4b6;*/
+    box-shadow: 0 6px 8px -5px black;
+  }
+  
+  #profit ul li {
+    border-bottom: none;
+    text-transform: uppercase;
+    padding: 15px;
+  }
+  
+  #profit ul li p {
+    color: #fff;
+    font-weight: 400;
+    padding-left: 60px;
+  }
+  
+  .ico-section {
+    background-repeat: no-repeat;
+    background-size: 30px 30px;
+    background-position: 13px center;
+    padding-left: 60px;
+  }
+  
+  .ico-clock {
+    background-image: url('../img/ico-clock.svg');
+  }
+  
+  .ico-done {
+    background-image: url('../img/ico-done.svg');
+  }
+  
+  .ico-door  {
+    background-image: url('../img/ico-door.svg');
+  }
+  
+  .ico-like  {
+    background-image: url('../img/ico-like.svg');
+  }
+  
+  
+  
+  /********** PORTFOLIO **********/
+  
+  
+  
+  /********** SERVICES **********/
+  
+  .services {
+    -moz-column-count: 2;
+    -webkit-column-count: 2;  
+    column-count: 2;
+    padding: 20px;
+    color: #eee;
+    background-color: #546777;
+    border-radius: 4px;
+  }
+  
+  .services h3 {
+    background: none;
+    box-shadow: none;
+  }
+  
+  .click {
+    background-image: none;
+    border: none;
+    padding: 0;
+    font-weight: 400;
+    color: #eee;
+  }
+  
+  #services {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  
+  
+  /********** TOOLS **********/
+  
+  .tools-gallery {
+    display: none;
+  }
+  
+  #tools {
+    max-width: 1000px;
+    margin: 0 auto 35px;
+  }
+  
+  #tools p {
+    padding: 2% 10% 3%;
+  }
+  
+  .tools-gallery-md {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .tools-gallery-md div {
+    padding: 1.5%;
+    flex-basis: 50%;
+  }
+  
+  .tools-gallery-md img {
+    border-radius: 10px;
+  }
+  
+  
+  
+  /********** SECONF OFFER **********/ 
+  /* -in MAIN OFFER- */
+
+
+
+  /********** STAFF **********/
+  /* -common arrows css in PORTFOLIO- */
+  
+  #staff {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  .staff {
+    display: none;
+  }
+  
+  .staff-md {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .staff-md div {
+    flex-basis: 25%
+  }
+  
+  
+  
+  /********** INFOGRAPHICS **********/
+  
+  .infographics {
+    display: flex;
+  }
+  
+  #infographics {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  .infographics p {
+    font-size: 1.3em;
+  }
+  
+  
+  
+  /********** CLIENTS **********/
+  
+   #clients {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  .clients {
+    display: none;
+  }
+  
+  .clients-md {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .clients-md div {
+    flex-basis: 50%;
+    padding: 2%;
+  }
+  
+  .clients-md div p {
+    border: 1px solid #eee;
+    border-radius: 5px;
+    padding: 10px
+  }
+  
+  .client-photo {
+    border-radius: 50%;
+    padding: 20%
+  }
+  
+  
+  
+  /********** CONTACTS **********/
+  
+  #contacts {
+    margin-bottom: 25px;
+  }
+  
+  
+  
+  /********** FOOTER **********/
+  
+  footer hr {
+    width: 60%;
+  }
+  #contacts ul {
+    padding-bottom: 10px
+  }
+  
+  button {
+    margin-top: 10px;
+  }
+  
+}
+
+
+@media (min-width: 1000px) {
+  
+  /********** GENERAL RULES **********/
+  
+  .js-media {
+    display: block; /* javascript mediaqueri breakpoint */
+  }
+
+  
+  
+  /********** COMMON RULES **********/
+  
+   .wrap {
+    min-height: calc(100vh - 210px);
+  }
+  
+  .section {
+    margin-top: 30px;
+  }
+  
+  .section h2 {
+    font-size: 1.7em;
+    padding: 60px 0 20px;
+  }
+
+  .font-size-one {
+    font-size: 1.2em;
+  }
+  
+  
+  /********** HEADER **********/
+  
+  #header {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+  
+  /***** logo *****/
+
+  .logo svg {
+    width: 400px;
+    height: 31px;
+  }
+  
+  .logo p {
+    letter-spacing: 4px
+  }
+  
+  /***** navigation *****/
+  
+  .main-menu ul li {
+    padding-right: 15px;
+  }
+
+  /***** dropdown button *****/
+
+  /***** phone *****/
+  
+  .phone-time {
+    letter-spacing: 3.9px;
+  }
+  
+  .phone-text {
+    display: block;
+    letter-spacing: 1.37px;
+    font-size: 0.6em;
+    font-weight: 100;
+  }
+
+  /********** MAIN OFFER, SECOND OFFER **********/
+
+  .offer-headline {
+    font-size: 2.2em
+  }
+  
+  /********** SPECIFIC **********/
+
+  .specific {
+    max-width: 1200px;
+  }
+  
+  #specific h3:nth-child(n) {
+    flex-basis: 22%;
+    padding: 25px;
+  } 
+  
+  
+  /********** PROFIT **********/
+  
+  .ico-section {
+    background-size: 35px 35px;
+  }
+
+  /********** PORTFOLIO **********/
+
+  /********** SERVICES **********/
+
+  /********** TOOLS **********/
+
+  /********** SECONF OFFER **********/ 
+  /* -in MAIN OFFER- */
+
+  /********** STAFF **********/
+  /* -common arrows css in PORTFOLIO- */
+
+  /********** INFOGRAPHICS **********/
+  
+  .infographics p {
+    font-size: 1.5em;
+  }
+
+  /********** CLIENTS **********/
+  
+  .clients-md div {
+    flex-basis: 25%;
+    padding: 2%;
+  }
+  
+  .client-photo {
+    border-radius: 50%;
+    padding: 10%
+  }
+
+  /********** CONTACTS **********/
+
+  #contacts {
+    margin-bottom: 45px;
+  }
+  
+  /********** FOOTER **********/
+  
+  footer hr {
+    width: 50%;
+    margin: 30px auto 45px;
+  }
+} /* /@media (min-width: 1000px) */
+
+
+
+@media (min-width: 1100px) {
+  
+  .wrap {
+    min-height: calc(100vh - 230px);
+  }
+    
+  .nav-phone-block {
+    display: block;
+    position: absolute;
+    top: center;
+    right: 2%;
+  }
+    
+  footer hr {
+    width: 40%;
+    margin: 40px auto 55px;
+  }
+} /* /@media (min-width: 1100px) */
+
+
