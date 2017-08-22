@@ -1,36 +1,45 @@
-// fixed navigation
+// fixed navigation 
+
+var header = $('#header');
+var navigation = $('nav');
+var logo = $('.logo svg');
+var logoText = $('.logo p');
+var phone = $('.phone a');
+var phoneText = $('.phone p');
 
 var windowWidth = $(window).width();
-var headerHeight
-var navBarHeight
-var fixed = false
+var headerHeight;
+var navBarHeight;
+var fixed = false;
 
 function updateHeights() {
-  headerHeight = $('#header').outerHeight();
-  if (!fixed) headerHeight = headerHeight - $('nav').outerHeight();
+  headerHeight = header.outerHeight();
+  if (!fixed) headerHeight = headerHeight - navigation.outerHeight();
 
-  navBarHeight = $('nav').outerHeight();
+  navBarHeight = navigation.outerHeight();
 }
 
 function topFixedNav() {
   if ($(window).scrollTop() >= headerHeight) {
-      fixed = true
-      $('nav').addClass('fixed');
+      fixed = true;
+      navigation.addClass('fixed');
       $(document.body).css('padding-top', navBarHeight );
-    
-      $('.logo p').css({'color': '#fff'});
-      $('.logo svg').css({'fill': '#fff'});
-      $('.phone').css({'color': '#fff'});
-      $('.phone a').css({'color': '#fff'});
+      
+      logoText
+        .add(phone)
+        .add(phoneText)
+        .css({'color': '#fff'});
+      logo.css({'fill': '#fff'});
   } else {
-      fixed = false
-      $('nav').removeClass('fixed');
+      fixed = false;
+      navigation.removeClass('fixed');
       $(document.body).css('padding-top', '0' );
     
-      $('.logo p').css({'color': '#000'});
-      $('.logo svg').css({'fill': '#000'});
-      $('.phone').css({'color': '#000'});
-      $('.phone a').css({'color': '#000'});
+      logoText
+        .add(phone)
+        .add(phoneText)
+        .css({'color': '#000'});
+      logo.css({'fill': '#000'});
   }
 }
 
@@ -60,7 +69,7 @@ $(window).ready( function() {
   updateHeights()
   $(window).on('scroll', onWindowScroll)
   $(window).on('resize', onWindowResize)
-  topFixedNav()
+  topFixedNav();
 });
 
 
@@ -105,16 +114,6 @@ function portfolioImgLoaderMd () {
   $('.portfolio-img-img3').attr('src', autoImg[portfolioImgCounter + 1].image);
   $('.portfolio-text-p3').text(autoImg[portfolioImgCounter + 1].info);
 };
-
-function reload() { 
-  if ($(".js-media").css("display") == "none") {
-    $('.portfolio-gallery-sm').show();
-    $('.portfolio-gallery-md').hide();
-  } else {
-    $('.portfolio-gallery-sm').hide();
-    $('.portfolio-gallery-md').show();
-  }; 
-}
 
 function clickSm () {
   $('.portfolio-sm-right').click(function(event) {
@@ -325,6 +324,6 @@ $('.clients-anchor-left').click(function(event) {
 
 // jump navigation padding
 
-window.addEventListener("hashchange", function() { scrollBy(0, -$('nav').outerHeight() ) });
+window.addEventListener("hashchange", function() { scrollBy(0, - navigation.outerHeight() ) });
  
 
