@@ -1,0 +1,1 @@
+jump to fix gap on whider then 600px
