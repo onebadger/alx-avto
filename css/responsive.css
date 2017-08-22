@@ -566,9 +566,10 @@
     
   .nav-phone-block {
     display: block;
+    
     position: absolute;
     top: center;
-    right: 2%;
+    right: 5%;
   }
     
   footer hr {
