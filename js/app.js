@@ -6,6 +6,7 @@ var logo = $('.logo svg');
 var logoText = $('.logo p');
 var phone = $('.phone a');
 var phoneText = $('.phone p');
+var cssBreakpoint = $('.js-media');
 
 var windowWidth = $(window).width();
 var headerHeight;
@@ -43,26 +44,29 @@ function topFixedNav() {
   }
 }
 
+
 function phoneOnWideScreen () {
-  if ($(".js-media").css("display") == "block") {
+  if (cssBreakpoint.css('display') === 'block') {
     $(window).bind('scroll', function () {
       if ($(window).scrollTop() > 600) {
         $('.nav-phone').addClass('nav-phone-block');
       } else {
         $('.nav-phone').removeClass('nav-phone-block');
       }
-    }) ;
+    });
   } 
 }
 
 function onWindowScroll() {
   topFixedNav()
+  phoneOnWideScreen()
 }
 
 function onWindowResize() {
   updateHeights()
   topFixedNav()
   updateHeights()
+  phoneOnWideScreen()
 }
 
 $(window).ready( function() {
@@ -172,13 +176,11 @@ clickMd();
 $(window).on('load', function () {
   reload();
   serviseResize();
-  phoneOnWideScreen();
 });
 
 $(window).on('resize', function () {
   reload();
   serviseResize();
-  phoneOnWideScreen();
 });
 
 
@@ -186,7 +188,7 @@ $(window).on('resize', function () {
 // #services
 
 function serviseResize () {
-  if ($(".js-media").css("display") == "none") {
+  if (cssBreakpoint.css('display') === 'none') {
     $('.serv').hide();
   } else {
     $('.serv').show();
