@@ -63,6 +63,12 @@
     
     display: flex;
     justify-content: center;
+    
+    padding: 2% 3%;
+  }
+  
+  .fixed {
+    padding: 2% 3%;
   }
   
   .main-menu {
@@ -226,6 +232,15 @@
   
   
   /********** PORTFOLIO **********/
+  
+  .portfolio-gallery-sm {
+    display: none;
+  }
+
+  .portfolio-gallery-md {
+    display: flex;
+    position: relative;
+  }
   
   
   
@@ -410,6 +425,14 @@
   
    .wrap {
     min-height: calc(100vh - 210px);
+  }
+  
+  nav {
+    padding: 1.5% 3%;
+  }
+  
+  .fixed {
+    padding: 1.5% 3%;
   }
   
   .section {
