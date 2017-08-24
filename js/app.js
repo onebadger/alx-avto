@@ -215,6 +215,11 @@ $('.click-03').on('click', function() {
   }
 });
 
+if (cssBreakpoint.css('display') === 'none') {
+  $('.serv').hide();
+} else {
+  $('.serv').show();
+}
 
 
 // #tools
