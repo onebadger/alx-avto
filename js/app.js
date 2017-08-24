@@ -120,6 +120,7 @@ function portfolioImgLoaderMd () {
 };
 
 function clickSm () {
+  
   $('.portfolio-sm-right').click(function(event) {
     event.preventDefault();
     if (portfolioImgCounter == lastPortfolioIndex) {
@@ -145,6 +146,7 @@ function clickSm () {
 }
 
 function clickMd () {
+  
   $('.portfolio-md-right').click(function(event) {
     event.preventDefault();
     if (portfolioImgCounter == lastPortfolioIndex - 1) {
@@ -170,48 +172,47 @@ function clickMd () {
 
 portfolioImgLoaderSm();
 portfolioImgLoaderMd();
-clickSm ();
+clickSm();
 clickMd();
-
-$(window).on('load', function () {
-  reload();
-  serviseResize();
-});
-
-$(window).on('resize', function () {
-  reload();
-  serviseResize();
-});
 
 
 
 // #services
 
-function serviseResize () {
-  if (cssBreakpoint.css('display') === 'none') {
-    $('.serv').hide();
+$('.click-01').on('click', function() {
+  event.preventDefault();
+  if (cssBreakpoint.css('display') === 'none' && $('.serv-01').css('display') === 'none' ) {
+    $('.serv-01').show();
+    $('.click-01').addClass('new');
+    
   } else {
-    $('.serv').show();
+    $('.serv-01').hide();
+    $('.click-01').removeClass('new');
   }
-}
+});
 
-$( ".click-01" ).on("click", function() {
+$('.click-02').on('click', function() {
   event.preventDefault();
-  $( ".serv-01" ).toggle( "fast", function() {
-  });
-  $( ".click-01" ).toggleClass( "new" );
+  if (cssBreakpoint.css('display') === 'none' && $('.serv-02').css('display') === 'none' ) {
+    $('.serv-02').show();
+    $('.click-02').addClass('new');
+    
+  } else {
+    $('.serv-02').hide();
+    $('.click-02').removeClass('new');
+  }
 });
-$( ".click-02" ).on("click", function() {
+
+$('.click-03').on('click', function() {
   event.preventDefault();
-  $( ".serv-02" ).toggle( "fast", function() {
-  });
-  $( ".click-02" ).toggleClass( "new" );
-});
-$( ".click-03" ).on("click", function() {
-  event.preventDefault();
-  $( ".serv-03" ).toggle( "fast", function() {
-  });
-  $( ".click-03" ).toggleClass( "new" );
+  if (cssBreakpoint.css('display') === 'none' && $('.serv-03').css('display') === 'none' ) {
+    $('.serv-03').show();
+    $('.click-03').addClass('new');
+    
+  } else {
+    $('.serv-03').hide();
+    $('.click-03').removeClass('new');
+  }
 });
 
 

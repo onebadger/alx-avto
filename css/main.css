@@ -348,6 +348,10 @@ nav {
   background-position: 13.4px center;
 }
 
+.serv {
+  display: none;
+}
+
 .new {
   background-image: url('../img/minus.svg');
   background-repeat: no-repeat;
