@@ -67,6 +67,7 @@ function onWindowResize() {
   topFixedNav()
   updateHeights()
   phoneOnWideScreen()
+  servicesListsItems()
 }
 
 $(window).ready( function() {
@@ -185,9 +186,13 @@ $('.click-01').on('click', function() {
     $('.serv-01').show();
     $('.click-01').addClass('new');
     
-  } else {
+  } else if (cssBreakpoint.css('display') === 'none' && $('.serv-01').css('display') === 'block' ) {
     $('.serv-01').hide();
     $('.click-01').removeClass('new');
+    
+  } else if (cssBreakpoint.css('display') !== 'none') {
+    return;
+    
   }
 });
 
@@ -197,29 +202,40 @@ $('.click-02').on('click', function() {
     $('.serv-02').show();
     $('.click-02').addClass('new');
     
-  } else {
+  } else if (cssBreakpoint.css('display') === 'none' && $('.serv-02').css('display') === 'block' ) {
     $('.serv-02').hide();
     $('.click-02').removeClass('new');
+    
+  } else if (cssBreakpoint.css('display') !== 'none') {
+    return;
+    
   }
 });
-
 $('.click-03').on('click', function() {
   event.preventDefault();
   if (cssBreakpoint.css('display') === 'none' && $('.serv-03').css('display') === 'none' ) {
     $('.serv-03').show();
     $('.click-03').addClass('new');
     
-  } else {
+  } else if (cssBreakpoint.css('display') === 'none' && $('.serv-03').css('display') === 'block' ) {
     $('.serv-03').hide();
     $('.click-03').removeClass('new');
+    
+  } else if (cssBreakpoint.css('display') !== 'none') {
+    return;
+    
   }
 });
 
-if (cssBreakpoint.css('display') === 'none') {
+
+function servicesListsItems () {
+  if ( cssBreakpoint.css('display') === 'none' ) {
   $('.serv').hide();
 } else {
   $('.serv').show();
 }
+}
+
 
 
 // #tools
