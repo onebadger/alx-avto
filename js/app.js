@@ -180,60 +180,38 @@ clickMd();
 
 // #services
 
-$('.click-01').on('click', function() {
-  event.preventDefault();
-  if (cssBreakpoint.css('display') === 'none' && $('.serv-01').css('display') === 'none' ) {
-    $('.serv-01').show();
-    $('.click-01').addClass('new');
-    
-  } else if (cssBreakpoint.css('display') === 'none' && $('.serv-01').css('display') === 'block' ) {
-    $('.serv-01').hide();
-    $('.click-01').removeClass('new');
-    
-  } else if (cssBreakpoint.css('display') !== 'none') {
-    return;
-    
-  }
-});
+function servicesClick( i ) {
+  return function() {
+      event.preventDefault();
 
-$('.click-02').on('click', function() {
-  event.preventDefault();
-  if (cssBreakpoint.css('display') === 'none' && $('.serv-02').css('display') === 'none' ) {
-    $('.serv-02').show();
-    $('.click-02').addClass('new');
-    
-  } else if (cssBreakpoint.css('display') === 'none' && $('.serv-02').css('display') === 'block' ) {
-    $('.serv-02').hide();
-    $('.click-02').removeClass('new');
-    
-  } else if (cssBreakpoint.css('display') !== 'none') {
-    return;
-    
-  }
-});
-$('.click-03').on('click', function() {
-  event.preventDefault();
-  if (cssBreakpoint.css('display') === 'none' && $('.serv-03').css('display') === 'none' ) {
-    $('.serv-03').show();
-    $('.click-03').addClass('new');
-    
-  } else if (cssBreakpoint.css('display') === 'none' && $('.serv-03').css('display') === 'block' ) {
-    $('.serv-03').hide();
-    $('.click-03').removeClass('new');
-    
-  } else if (cssBreakpoint.css('display') !== 'none') {
-    return;
-    
-  }
-});
+      if (cssBreakpoint.css('display') === 'none' && $('.serv-0' + i).css('display') === 'none' ) {
+      $('.serv-0' + i).show();
+      $('.click-0' +i).addClass('new');
 
+    } else if (cssBreakpoint.css('display') === 'none' && $('.serv-0' + i).css('display') === 'block' ) {
+      $('.serv-0' + i).hide();
+      $('.click-0' + i).removeClass('new');
+
+    } else if (cssBreakpoint.css('display') !== 'none') {
+      return;
+
+    }
+  }
+}
+
+$(document).ready(function() {
+  for(var i = 1; i < 4; i++) {
+    $('.click-0' + i).click( servicesClick( i ) );
+  }
+});
 
 function servicesListsItems () {
   if ( cssBreakpoint.css('display') === 'none' ) {
-  $('.serv').hide();
-} else {
-  $('.serv').show();
-}
+    $('.serv').hide();
+    $('.click').removeClass('new');
+  } else {
+    $('.serv').show();
+  }
 }
 
 
