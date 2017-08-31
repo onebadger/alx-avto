@@ -1,5 +1,6 @@
 jump to fix gap on whider then 600px
-keep phone numper on wide screen when page reload (before scrolling)
+keep phone number on fixed top (on wide screen) when page reload (before scrolling)
+phone number on fixed top (on wide screen) appear and disappesr slowly
 portfolio functions optimization + tools + staff + clients
 keep services lists open on resize in mobile
 blurred images on load
