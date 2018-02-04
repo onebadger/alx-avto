@@ -135,11 +135,11 @@
     display: block;
     align-self: center;
     flex-basis: 50%;
-    max-width: 350px;
+    max-width: 400px;
   }
   
   .offer-img img {
-    padding: 25px;
+/*    padding: 25px;*/
     border-radius: 30px;
   }
   

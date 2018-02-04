@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/forms.css">
     <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" type="text/css" href="css/slider.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700|Russo+One&amp;subset=cyrillic" rel="stylesheet">
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
     
@@ -70,8 +71,13 @@
         <div class="offer-container">
           <h1 class="offer-headline">ЗАПИШИТЕСЬ НА РЕМОНТ ВАШЕГО АВТО СЕЙЧАС И ПОЛУЧИТЕ 5% СКИДКИ НА ПОКРАСКУ</h1>
           <div class="offer-box">
-            <div class="offer-img">
-              <img src="img/map.jpg">
+            <div class="offer-img" id="cssSlider">
+              <div id="sliderImages">
+                <img id="si_1" src="img/main-offer-img.jpg">
+                <img id="si_2" src="img/second-offer-img.jpg">
+                <img id="si_3" src="img/main-offer-img.jpg">
+                <div style="clear:left;"></div>
+              </div>
             </div>
             <form class="offer-form" action="forms/form1.php" method="post">
               <input type="text" id="name1" name="user_name1" placeholder="Ваше имя">
