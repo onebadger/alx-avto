@@ -1,12 +1,12 @@
 #cssSlider {
-  width: 300px;
+  width: 450px;
 	height: 300px;
 	overflow: hidden;
 /*	border: 10px solid #666;*/
 }
 
 #sliderImages {
-	width : 900px;
+	width : 1350px;
 	height: 300px;
 	overflow: hidden;
 	
@@ -24,36 +24,36 @@
 @keyframes slide{
 	0%{margin-left: 0px;}
 	31.3333%{margin-left: 0px;}
-	34.3333%{margin-left: -300px;}
-	65.6666%{margin-left: -300px;}
-	68.6666%{margin-left: -600px;}
-	100%{margin-left: -600px;}
+	34.3333%{margin-left: -450px;}
+	65.6666%{margin-left: -450px;}
+	68.6666%{margin-left: -900px;}
+	100%{margin-left: -900px;}
 }
 
 @-moz-keyframes slide{
 	0%{margin-left: 0px;}
 	31.3333%{margin-left: 0px;}
-	34.3333%{margin-left: -300px;}
-	65.6666%{margin-left: -300px;}
-	68.6666%{margin-left: -600px;}
-	100%{margin-left: -600px;}
+	34.3333%{margin-left: -450px;}
+	65.6666%{margin-left: -450px;}
+	68.6666%{margin-left: -900px;}
+	100%{margin-left: -900px;}
 }
 
 @-webkit-keyframes slide{
 	0%{margin-left: 0px;}
 	31.3333%{margin-left: 0px;}
-	34.3333%{margin-left: -300px;}
-	65.6666%{margin-left: -300px;}
-	68.6666%{margin-left: -600px;}
-	100%{margin-left: -600px;}
+	34.3333%{margin-left: -450px;}
+	65.6666%{margin-left: -450px;}
+	68.6666%{margin-left: -900px;}
+	100%{margin-left: -900px;}
 }
 
 
 @-o-keyframes slide{
 	0%{margin-left: 0px;}
 	31.3333%{margin-left: 0px;}
-	34.3333%{margin-left: -300px;}
-	65.6666%{margin-left: -300px;}
-	68.6666%{margin-left: -600px;}
-	100%{margin-left: -600px;}
+	34.3333%{margin-left: -450px;}
+	65.6666%{margin-left: -450px;}
+	68.6666%{margin-left: -900px;}
+	100%{margin-left: -900px;}
 }
